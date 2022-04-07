@@ -77,8 +77,8 @@ def find_library(candidate: str) -> Optional[str]:
 
     lib_name = lib_path.name
 
-    if lib_name.startswith(candidate) \
-            or ((platform.system() == "Linux") and lib_name.startswith("lib" + candidate)):
+    if candidate in lib_name \
+            or ((platform.system() == "Linux") and ("lib" + candidate) in libname):
         return str(lib_path)
 
     # We don't have a matching library.
