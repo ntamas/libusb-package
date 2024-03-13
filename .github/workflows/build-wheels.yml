@@ -33,7 +33,6 @@ jobs:
           - ubuntu-latest
           - windows-latest
           - macos-13
-          - macos-14
 
     steps:
       - uses: actions/checkout@v4
@@ -46,7 +45,7 @@ jobs:
         with:
           platforms: arm64
 
-      - uses: actions/setup-python@v4
+      - uses: actions/setup-python@v5
         name: Install Python
         with:
           python-version: '3.9'
